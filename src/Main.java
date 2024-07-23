@@ -2,7 +2,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
+
+        System.out.print("What's your name? ");
+        String name = scanner.nextLine();
 
         System.out.print("Enter your weight in kilograms: ");
         double weight = scanner.nextDouble();
@@ -12,7 +16,7 @@ public class Main {
 
         double bmi = calculateBMI(weight, height);
 
-        System.out.println("Your BMI is: " + bmi);
+        System.out.println("\n" + name + " your BMI is: " + bmi);
         System.out.println("BMI Category: " + getBMICategory(bmi));
     }
 
